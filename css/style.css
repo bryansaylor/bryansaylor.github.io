@@ -144,12 +144,17 @@ h2 a {
   font-weight: 600;
 }
 .read-more, .read-less {
-  text-align: right;
+  text-align: center;
   margin-top: 30px;
 }
 .read-more a, .read-less a {
   color: #043049;
   font-weight: 600;
+  background: black;
+  color: white;
+  padding: 17px;
+  border-radius: 10px;
+
 }
 
 
@@ -192,7 +197,7 @@ h2 a {
 
 footer {
   background: #121212;
-  padding: 65px 0 45px;
+  padding: 40px 0 40px;
   text-align: center;
 }
 footer .logo {
@@ -202,7 +207,7 @@ footer .logo {
 footer ul li {
   display: inline-block;
   list-style: none;
-  margin: 0 26px 75px;
+  margin: 0 26px 25px;
 }
 footer p {
   font-size: 18px;
@@ -242,7 +247,9 @@ form {
 }
 
 .modal{
-  display: none;
+  /*display: none;*/
+  transition: .3s all;
+  opacity: 0;
 }
 
 .modal-active {
@@ -252,6 +259,7 @@ form {
   display: block;
   position: fixed;
   top: 0;
+  opacity: 1;
 }
 
 .music-pic:hover {
@@ -259,7 +267,7 @@ form {
 }
 
 .big-pic {
-  width: 96% !important;
+  width: 100% !important;
   position: absolute;
   left:0;
   top:50%;
@@ -268,6 +276,7 @@ form {
 
 footer .logo {
   color: white;
+  margin-bottom: 16px;
 }
 
 #register-btn-area {
@@ -295,4 +304,42 @@ footer .logo {
 
 label {
   font-size: 16px;
+}
+
+@media screen and (max-width: 768px){
+  #posts, .post h2, .post {
+    width: 100%;
+    float: none;
+  }
+
+  .post {
+    padding-left: 15px;
+  }
+  #page-content, .container {
+    width: 100%;
+  }
+
+  #sidebar {
+    clear: both;
+    float: none;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    border: none;
+
+  }
+  iframe {
+    width: 100%;
+  }
+
+  input {
+    font-size: 20px;
+
+  }
+
+ header .logo {
+    float: none;
+    /*display: inline-block;*/
+    text-align: center;
+  }
 }

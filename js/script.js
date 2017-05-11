@@ -5,6 +5,11 @@ $(".read-more").click(showStuff);
 $(".read-less").click(hideStuff);
 $(".music-pic").click(doModalStuff);
 $("#modal").click(clearModal);
+$(document).on('keyup',function(evt) {
+    if (evt.keyCode == 27) {
+       clearModal(); //for my wife
+    }
+});
 
 function showStuff(e) {
 	e.preventDefault();
